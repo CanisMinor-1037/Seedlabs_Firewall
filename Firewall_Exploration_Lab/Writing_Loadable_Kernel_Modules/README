@@ -1,0 +1,20 @@
+$ make
+
+// Show information about a Linux Kernel module
+$ modinfo hello.ko
+
+// Insert the kernel module into the running kernel
+$ sudo insmod hello.ko
+
+// List kernel modules
+$ lsmod | grep hello
+
+// Remove the specified module from the kernel.
+$ sudo rmmod hello
+
+// Verify the module has been executed successfully
+$ dmesg
+[ 3954.432033] Hello World!
+[ 3972.098129] Bye-bye World!
+
+$ make clean
