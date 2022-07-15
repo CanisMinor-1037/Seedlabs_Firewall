@@ -15,7 +15,7 @@
 #include <linux/socket.h>
 
 /**
- * define two simple functions
+ * define two simple functionsls as
  * each printing out a simple message
  */
 unsigned int
@@ -27,7 +27,7 @@ hello1 (void * priv, struct sk_buff * skb, const struct nf_hook_state * state) {
 unsigned int
 hello2 (void * priv, struct sk_buff * skb, const struct nf_hook_state * state) {
     printk(KERN_INFO "*** Hello, netfilter 222222!\n");
-    return NF_DROP;
+    return NF_ACCEPT;
 }
 
 /**
